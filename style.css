@@ -720,9 +720,56 @@ button{ font-family: inherit; cursor: pointer; }
 
 .letter-paper{
   position:absolute;
-  top: 6%;
+  top:6%;
   left:50%;
-  transform: translate(-50%, 0) scale(0.4);
-  width: min(340px, 85vw);
-  background: var(--off-white);
-  background-image: repeating-linear-gradient(0deg, transparent 0, transparent
+  transform:translate(-50%,0) scale(0.4);
+  width:min(340px,85vw);
+  background:var(--off-white);
+  padding:24px;
+  border-radius:6px;
+  box-shadow:var(--shadow-lift);
+  opacity:0;
+  visibility:hidden;
+  transition:all .6s ease;
+  z-index:5;
+}
+
+.envelope.open .envelope-flap{
+  transform:rotateX(180deg);
+}
+
+.envelope.open .wax-seal{
+  opacity:0;
+}
+
+.letter-paper.open{
+  opacity:1;
+  visibility:visible;
+  transform:translate(-50%,-170px) scale(1);
+}
+
+.letter-greeting{
+  font-family:var(--font-script);
+  font-size:2rem;
+  color:var(--brown);
+}
+
+.letter-body{
+  font-family:var(--font-body);
+  font-size:1.2rem;
+  line-height:1.8;
+  color:var(--ink);
+}
+
+.letter-signoff{
+  text-align:right;
+  font-family:var(--font-script);
+  font-size:1.6rem;
+  margin-top:20px;
+}
+
+.letter-close{
+  position:absolute;
+  top:10px;
+  right:10px;
+}
