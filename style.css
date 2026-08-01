@@ -406,19 +406,25 @@ button{ font-family: inherit; cursor: pointer; }
 }
 @keyframes fadeInSlow{ from{ opacity:0;} to{ opacity:1;} }
 
-.gallery-grid{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap: 0.9rem;
-}
 .gallery-grid img{
-  width:100%; height: 220px; object-fit:cover;
-  border-radius: 3px;
-  box-shadow: var(--shadow-soft);
-  transform: rotate(-1.5deg);
+  width:100%;
+  height:auto;
+  max-height:400px;
+  object-fit:contain;
+  border-radius:8px;
+  box-shadow:var(--shadow-soft);
+  transform:rotate(-1.5deg);
+  background:#fff;
+  padding:6px;
 }
-.gallery-grid img:nth-child(2){ transform: rotate(1.5deg); }
-.gallery-grid img:nth-child(3){ transform: rotate(-1deg); }
+
+.gallery-grid img:nth-child(2){
+  transform:rotate(1.5deg);
+}
+
+.gallery-grid img:nth-child(3){
+  transform:rotate(-1deg);
+}
 
 .single-photo{
   width:100%;
