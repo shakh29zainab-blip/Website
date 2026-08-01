@@ -1,1 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Girlfriend's Day ❤️</title>
 
+<!-- Fonts: handwritten + serif display + small utility text -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== BACKGROUND MUSIC ===================== -->
+<audio id="bgMusic" src="video1.mp3.m4a" loop preload="auto"></audio>
+<button class="music-toggle" id="musicToggle" type="button" aria-label="Play background music">
+  <span id="musicIcon">🎵</span>
+</button>
+
+<!-- ===================== AMBIENT DECORATION LAYER ===================== -->
+<!-- Floating hearts + sparkles that drift gently over the whole page -->
+<div class="ambient-layer" id="ambientLayer" aria-hidden="true"></div>
+
+<!-- ===================== HERO SECTION ===================== -->
+<header class="hero" id="hero">
+
+  <!-- scattered decorations -->
+  <span class="deco heart-deco" style="top:8%; left:6%;" aria-hidden="true">♡</span>
+  <span class="deco sparkle-deco" style="top:14%; left:85%;" aria-hidden="true">✦</span>
+  <span class="deco heart-deco" style="top:70%; left:4%;" aria-hidden="true">❤</span>
+  <img class="deco washi-strip" src="https://images.unsplash.com/photo-1607083681678-994a4c937cd8?w=300&h=90&fit=crop" alt="" aria-hidden="true">
+
+  <div class="hero-inner">
+
+    <!-- LEFT: Title + text + button -->
+    <div class="hero-left fade-up">
+      <p class="eyebrow">— for the one i love —</p>
+      <h1 class="hero-title">Happy Girlfriend's<br>Day <span class="heart-pulse">❤️</span></h1>
+      <p class="hero-paragraph">Every moment with you is my favorite part of every day.</p>
+      <button class="btn-surprise" id="surpriseBtn" type="button">
+        Click for Surprise <span class="btn-heart">💕</span>
+      </button>
+    </div>
+
+    <!-- RIGHT: Polaroid -->
+    <div class="hero-right fade-up delay-1">
+      <div class="polaroid hero-polaroid">
+        <span class="tape tape-top" aria-hidden="true"></span>
+        <span class="paperclip" aria-hidden="true">📎</span>
+        <img src="vibing.jpg" alt="Our favorite photo together" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&h=600&fit=crop'">
+        <p class="polaroid-caption">us, always &amp; forever</p>
+        <span class="flower-deco fd-1" aria-hidden="true">🌼</span>
+        <span class="flower-deco fd-2" aria-hidden="true">🤍</span>
+        <span class="deco sparkle-deco sparkle-on-photo" aria-hidden="true">✧</span>
+        <span class="deco heart-deco heart-on-photo" aria-hidden="true">♡</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="scroll-hint fade-up delay-2">↓ scroll our little world ↓</div>
+</header>
+
+<!-- ===================== SURPRISE VIDEO POPUP ===================== -->
+<div class="popup-overlay" id="surprisePopup">
+  <div class="popup-paper video-popup">
+    <button class="popup-close" data-close aria-label="Close">✕</button>
+    <p class="popup-title">a little surprise for you 💌</p>
+    <video id="surpriseVideo" class="surprise-video" controls playsinline>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<!-- ===================== EXPLORE OUR WORLD ===================== -->
+<section class="section explore" id="explore">
+  <span class="deco stamp-deco" style="top:4%; left:2%;" aria-hidden="true">
+    <span class="stamp-inner">POSTAGE</span>
+  </span>
+  <span class="deco sparkle-deco" style="top:6%; right:6%;" aria-hidden="true">✦</span>
+
+  <h2 class="section-heading">✨ Explore Our World ♡</h2>
+  <p class="section-sub">little doors into our story</p>
+
+  <div class="card-grid">
+
+    <button class="mem-card fade-up" data-popup="popup-memories">
+      <span class="card-icon" aria-hidden="true">❤️</span>
+      <span class="card-title">Our Memories</span>
+      <span class="card-link">Click →</span>
+      <span class="card-tape" aria-hidden="true"></span>
+    </button>
+
+    <button class="mem-card fade-up delay-1" data-popup="popup-story">
+      <span class="card-icon" aria-hidden="true">📖</span>
+      <span class="card-title">Our Story</span>
+      <span class="card-link">Click →</span>
+      <span class="card-tape" aria-hidden="true"></span>
+    </button>
+
+    <button class="mem-card fade-up delay-2" data-popup="popup-firstdate">
+      <span class="card-icon" aria-hidden="true">🌸</span>
+      <span class="card-title">Our First Date</span>
+      <span class="card-link">Click →</span>
+      <span class="card-tape" aria-hidden="true"></span>
+    </button>
+
+    <button class="mem-card fade-up delay-3" data-popup="popup-festivals">
+      <span class="card-icon" aria-hidden="true">🎉</span>
+      <span class="card-title">Our Festivals</span>
+      <span class="card-link">Click →</span>
+      <span class="card-tape" aria-hidden="true"></span>
+    </button>
+
+    <button class="mem-card fade-up delay-4 card-wide" data-popup="popup-place">
+      <span class="card-icon" aria-hidden="true">📍</span>
+      <span class="card-title">Our Favorite Place</span>
+      <span class="card-link">Click →</span>
+      <span class="card-tape" aria-hidden="true"></span>
+    </button>
+
+  </div>
+</section>
+
+<!-- ---------- POPUP: Our Memories (gallery of 3) ---------- -->
+<div class="popup-overlay" id="popup-memories">
+  <div class="popup-paper">
+    <button class="popup-close" data-close aria-label="Close">✕</button>
+    <p class="popup-title">❤️ Our Memories</p>
+    <div class="gallery-grid">
+      <img src="memory1.jpg" alt="Memory one" onerror="this.src='https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop'">
+      <img src="memory2.jpg" alt="Memory two" onerror="this.src='https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=400&h=400&fit=crop'">
+      <img src="memory3.jpg" alt="Memory three" onerror="this.src='https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=400&h=400&fit=crop'">
+    </div>
+  </div>
+</div>
+
+<!-- ---------- POPUP: Our Story (timeline) ---------- -->
+<div class="popup-overlay" id="popup-story">
+  <div class="popup-paper popup-wide">
+    <button class="popup-close" data-close aria-label="Close">✕</button>
+    <p class="popup-title">📖 Our Story</p>
+    <div class="timeline">
+      <div class="timeline-line" aria-hidden="true"></div>
+
+      <div class="timeline-item">
+        <span class="timeline-year">2022</span>
+        <img src="story2022.jpg" alt="2022" onerror="this.src='https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=300&h=300&fit=crop'">
+        <p class="timeline-note">where it all began</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2023</span>
+        <img src="story2023.jpg" alt="2023" onerror="this.src='https://images.unsplash.com/photo-1495570689054-04a874ee9d4d?w=300&h=300&fit=crop'">
+        <p class="timeline-note">falling deeper</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2024</span>
+        <img src="story2024.jpg" alt="2024" onerror="this.src='https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=300&h=300&fit=crop'">
+        <p class="timeline-note">building our world</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2025</span>
+        <img src="story2025.jpg" alt="2025" onerror="this.src='https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=300&h=300&fit=crop'">
+        <p class="timeline-note">through it all, us</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2026</span>
+        <img src="story2026.jpg" alt="2026" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=300&h=300&fit=crop'">
+        <p class="timeline-note">still choosing you</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- POPUP: Our First Date ---------- -->
+<div class="popup-overlay" id="popup-firstdate">
+  <div class="popup-paper">
+    <button class="popup-close" data-close aria-label="Close">✕</button>
+    <p class="popup-title">🌸 Our First Date</p>
+    <img class="single-photo" src="firstdate.jpg" alt="Our first date" onerror="this.src='https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=500&h=500&fit=crop'">
+    <p class="handwritten-caption">the day my heart quietly chose you</p>
+  </div>
+</div>
+
+<!-- ---------- POPUP: Our Festivals ---------- -->
+<div class="popup-overlay" id="popup-festivals">
+  <div class="popup-paper">
+    <button class="popup-close" data-close aria-label="Close">✕</button>
+    <p class="popup-title">🎉 Our Festivals</p>
+    <div class="decorated-photo">
+      <span class="flower-deco fd-1" aria-hidden="true">🌼</span>
+      <span class="flower-deco fd-2" aria-hidden="true">🤍</span>
+      <img class="single-photo" src="festival.jpg" alt="A festival together" onerror="this.src='https://images.unsplash.com/photo-1604017011826-d3b4c23f8914?w=500&h=500&fit=crop'">
+      <span class="flower-deco fd-3" aria-hidden="true">🌸</span>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- POPUP: Our Favorite Place ---------- -->
+<div class="popup-overlay" id="popup-place">
+  <div class="popup-paper">
+    <button class="popup-close" data-close aria-label="Close">✕</button>
+    <p class="popup-title">📍 Our Favorite Place</p>
+    <div class="pin-photo-wrap">
+      <img class="single-photo" src="favplace.jpg" alt="Our favorite place" onerror="this.src='https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&h=500&fit=crop'">
+      <span class="pin-doodle" aria-hidden="true">📍</span>
+    </div>
+    <p class="handwritten-caption">the corner of the world that feels like us</p>
+  </div>
+</div>
+
+<!-- ===================== MEMORIES SECTION (hanging photo rope) ===================== -->
+<section class="section memories" id="memories">
+  <span class="deco flower-deco fd-bg1" aria-hidden="true">🌼</span>
+  <span class="deco flower-deco fd-bg2" aria-hidden="true">🤍</span>
+  <span class="deco sparkle-deco" style="top:10%; left:8%;" aria-hidden="true">✦</span>
+  <span class="deco paper-note" style="bottom:8%; right:6%;" aria-hidden="true"></span>
+
+  <h2 class="section-heading">Memories ♡</h2>
+  <p class="section-sub">a little rope of us</p>
+
+  <div class="rope-wrap">
+    <div class="rope-line" aria-hidden="true"></div>
+    <div class="rope-track" id="ropeTrack">
+      <div class="rope-photo">
+        <span class="wood-clip" aria-hidden="true">📎</span>
+        <img src="vibing.jpg" alt="Memory photo one" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=350&h=420&fit=crop'">
+      </div>
+      <div class="rope-photo">
+        <span class="wood-clip" aria-hidden="true">📎</span>
+        <img src="vibing2.jpg" alt="Memory photo two" onerror="this.src='https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=350&h=420&fit=crop'">
+      </div>
+      <div class="rope-photo">
+        <span class="wood-clip" aria-hidden="true">📎</span>
+        <img src="vibing3.jpg" alt="Memory photo three" onerror="this.src='https://images.unsplash.com/photo-1495570689054-04a874ee9d4d?w=350&h=420&fit=crop'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OUR BOND SECTION ===================== -->
+<section class="section bond" id="bond">
+  <div class="torn-note fade-up">
+    <span class="deco tape-piece tape-1" aria-hidden="true"></span>
+    <span class="deco stamp-deco stamp-small" aria-hidden="true"><span class="stamp-inner">LOVE</span></span>
+    <h2 class="section-heading small-heading">Our Bond ♡</h2>
+    <p class="bond-line">Different by chance.</p>
+    <p class="bond-line">Best friends by choice.</p>
+    <p class="bond-line">Lovers by fate.</p>
+    <p class="bond-line bond-final">Soulmates forever.</p>
+    <span class="deco heart-deco" style="bottom:8%; left:10%;" aria-hidden="true">♡</span>
+    <span class="deco flower-deco fd-3" style="bottom:6%; right:8%;" aria-hidden="true">🌸</span>
+  </div>
+</section>
+
+<!-- ===================== WHY YOU'RE SPECIAL SECTION ===================== -->
+<section class="section special" id="special">
+  <div class="torn-note torn-note-pink fade-up">
+    <span class="deco paperclip paperclip-corner" aria-hidden="true">📎</span>
+    <h2 class="section-heading small-heading">Why You're Special</h2>
+    <ul class="special-list">
+      <li>❤ You understand me.</li>
+      <li>❤ You make me a better person.</li>
+      <li>❤ You're my peace.</li>
+      <li>❤ You're my biggest happiness.</li>
+      <li>❤ You're my forever.</li>
+    </ul>
+    <span class="deco flower-deco fd-1" style="top:6%; right:6%;" aria-hidden="true">🌼</span>
+    <span class="deco heart-deco" style="bottom:5%; left:6%;" aria-hidden="true">❤</span>
+  </div>
+</section>
+
+<!-- ===================== LOVE LETTER SECTION ===================== -->
+<section class="section letter-section" id="letter">
+  <span class="deco sparkle-deco" style="top:8%; left:10%;" aria-hidden="true">✦</span>
+  <span class="deco heart-deco" style="top:12%; right:10%;" aria-hidden="true">♡</span>
+
+  <h2 class="section-heading">One Last Little Thing ♡</h2>
+  <p class="section-sub">tap the envelope</p>
+
+  <div class="envelope-wrap">
+    <div class="envelope" id="envelope">
+      <div class="envelope-back"></div>
+      <div class="envelope-flap"></div>
+      <div class="wax-seal">❤</div>
+      <div class="envelope-front"></div>
+    </div>
+
+    <div class="letter-paper" id="letterPaper">
+      <button class="popup-close letter-close" id="letterClose" aria-label="Close letter">✕</button>
+      <p class="letter-greeting">My Love,</p>
+      <p class="letter-body">
+        Every day with you becomes my favorite memory.<br>
+        Your smile is my peace, your laughter is my happiness, and your love is my greatest blessing.<br>
+        Thank you for making every ordinary moment feel magical.<br>
+        No matter where life takes us, my heart will always choose you.<br>
+        I love you today, tomorrow, and forever. ❤️
+      </p>
+      <p class="letter-signoff">— always yours</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>made with ❤ just for you</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+      </html>
